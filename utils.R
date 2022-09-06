@@ -88,6 +88,7 @@ kernel.basis <- function(X,A,Y,
     #   Vectorize( function(i,j) f(X[i,], X[j,]) ) 
     # )
     # --------------------------------------------------------
+    # C <- RBF_kernel_C(X, c, set_c)
     C <- RBF_kernel_C_parallel(X, c, set_c)
     # --------------------------------------------------------
     W <- C[set_c,]
