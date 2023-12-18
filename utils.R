@@ -169,9 +169,9 @@ osqp_kernel_sbw <- function(X,A,Y,
   # + kernel basis (basis=='kernel')
   #     @kernel.approximation: if TRUE, use the Nystrom kernel approximation method proposed in \insertRef{wang2019scalable}
   #                            if FALSE, use the full gram matrix to compute eigenvectors as in \insertRef{hazlett2018}
-  #     @c: Number of columns selected for the approximation. 
-  #     @l: Target rank l < c. 
-  #     @s: parameter for further dimensionality reduction
+  #     @c: sketch size for the standard Nystrom approximation. 
+  #     @l: regularization parameter l < c. 
+  #     @s: target rank for s < l the rank-restricted Nyström approximation
   #     @gamma: RBK parameter; set default value as 1/(2*dim(X))
   #     @U.mat: externel input for nxc eigenvector matrix; only used when kernel.approximation==FALSE
   # + power series basis (basis=='power')
